@@ -137,13 +137,14 @@ document.querySelectorAll('.js-save-link')
       const quantityInput = document.querySelector(`.js-quantity-input-${productId}`)
       // console.log(Number(quantityInput.value))
       const newQuantity = Number(quantityInput.value)
-
+      if(newQuantity < 1){
+        alert("Invalid")
+        return
+      } 
       updateQuantity(productId,newQuantity)
 
       const quantityLabel = document.querySelector(`.js-quantity-label-${productId}`)
-
       quantityLabel.innerHTML = newQuantity
-
       updateCartQuantity()
 
     })
