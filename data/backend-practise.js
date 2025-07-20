@@ -4,6 +4,6 @@ xhr.addEventListener('load' , () => {
   console.log(xhr.response)
 })
 
-xhr.open('GET', 'https://supersimplebackend.dev/documentation')
+
 xhr.send();  // asycnoronous
 xhr.response 
